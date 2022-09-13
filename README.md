@@ -1,7 +1,7 @@
 # mafia-scanner
 
 La policia necesita una API para buscar a los mafiosos, registrarlos y poderlos emprisionar. 
-Esta en tus manos ayudarles a que los agentes de la ley cumplan con su deber.
+Esta en tus manos ayudar a que los agentes de la ley cumplan con su deber.
 
 Gracias por tu colaboracion.
 
