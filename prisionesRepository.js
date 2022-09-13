@@ -1,4 +1,4 @@
-export class PrisionesDB {
+export class PrisionesRepository {
     prisiones = [{
         id: 1,
         prisioneros: []
@@ -10,15 +10,15 @@ export class PrisionesDB {
         prisioneros: []
     }]
 
-    getAll() {
+    obtenerTodos() {
         return this.prisiones
     }
 
-    getById(id) {
+    obtenerPorId(id) {
         return this.prisiones.find(prision => prision.id == id);
     }
 
-    imprision(idPresion, idMafioso) {
-        this.getById(idPresion).prisioneros.push(idMafioso);
+    encarcelar(idPresion, idMafioso) {
+        this.obtenerPorId(idPresion).prisioneros.push(idMafioso);
     }
 }

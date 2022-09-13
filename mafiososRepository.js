@@ -1,5 +1,5 @@
-export class MafiososDB {
-    lastId = 4;
+export class MafiososRepository {
+    ultimaId = 4;
     mafiosos = [{
         id: 1,
         nombre: "Thomas Shelby",
@@ -20,21 +20,21 @@ export class MafiososDB {
         descripcion: "Líder de la mafia del chorizo aunque se rumorea que le gusta mas la mortadela."
     }]
 
-    create(nombre, estado, edad, descripcion) {
-        this.lastId++;
-        this.update(this.lastId, nombre, estado, edad, descripcion)
+    crear(nombre, estado, edad, descripcion) {
+        this.ultimaId++;
+        this.actualizar(this.ultimaId, nombre, estado, edad, descripcion)
     }
 
-    getAll() {
+    obtenerTodos() {
         return this.mafiosos
     }
 
-    getById(id) {
+    obtenerPorId(id) {
         return this.mafiosos.find(mafioso => mafioso.id == id);
     }
 
-    update(id, nombre, estado, edad, descripcion) {
-        this.deleteById(id);
+    actualizar(id, nombre, estado, edad, descripcion) {
+        this.eliminarPorId(id);
         this.mafiosos.push({
             id,
             nombre,
@@ -44,7 +44,7 @@ export class MafiososDB {
         })
     }
 
-    deleteById(id) {
+    eliminarPorId(id) {
         this.mafiosos = this.mafiosos.filter(mafioso => {
             return mafioso.id != id;
         })

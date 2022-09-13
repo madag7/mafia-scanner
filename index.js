@@ -1,12 +1,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { MafiososDB } from './mafiososDB.js';
-import { PrisionesDB } from './prisionesDB.js';
+import { MafiososRepository } from './mafiososRepository.js';
+import { PrisionesRepository } from './prisionesRepository.js';
 
 
 const app = express()
-const mafiososDB = new MafiososDB();
-const prisionesDB = new PrisionesDB();
+const mafiososRepository = new MafiososRepository();
+const prisionesRepository = new PrisionesRepository();
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
