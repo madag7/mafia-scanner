@@ -11,7 +11,9 @@ Para bajar el proyecto, abre una terminal nueva y pon:
 
 Luego, abre tu editor de codigo preferido y para iniciar la applicacion haz:
 
-```npm install
-npm start```
+```
+npm install
+npm start
+```
 
 Y, ¡listos!
